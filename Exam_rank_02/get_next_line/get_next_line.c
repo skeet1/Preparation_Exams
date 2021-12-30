@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 12:03:32 by mkarim            #+#    #+#             */
-/*   Updated: 2021/12/29 18:34:27 by mkarim           ###   ########.fr       */
+/*   Updated: 2021/12/30 10:57:59 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char    *ft_strdup(char *s)
     char    *str;
     
     i = 0;
-    //printf("here in strdup %s\n", s);
     str = (char *)malloc(ft_strlen(s) + 1);
     if (!str)
         return (NULL);
@@ -41,7 +40,6 @@ char    *ft_strdup(char *s)
         i++;
     }
     str[i] = '\0';
-    //printf("final strdup : %s\n", str);
     return (str);
 }
 
@@ -67,13 +65,3 @@ char    *get_next_line(int fd)
         return (NULL);
     return (ft_strdup(line));
 }
-// int main()
-// {
-//     int fd = open("test", O_CREAT | O_RDWR);
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-// }
